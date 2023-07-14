@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --bg: #f7f7ff;
+  --text: #16161a;
+  --icons: #91979d;
+  --border: rgba(33, 34, 43, 0.1);
+  --color-online: #43b580;
+  --color-idle: #f9a619;
+  --color-busy: #eb4545;
+  --color-offline: #757e8b;
+}
+
+/* DarkMode Colors */
+.dark-mode {
+  --bg: #16161a;
+  --text: #fefeff;
+  --icons: #a6a8b8;
+  --border: rgba(33, 34, 43, 0.576);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Nav Bar */
+/* header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 40px;
+  animation: fadeInDown .8s;
+}
+
+header .header_links {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  outline: none;
+  text-decoration: none;
+  color: var(--icons);
+  padding: 5px 12px;
+  transition: 0.3s all;
+  font-size: 15px;
+}
+
+header nav ul li a:hover {
+  color: var(--text);
+}
+
+header nav ul li a.active {
+  color: var(--text);
+}
+
+@media only screen and (max-width: 600px) {
+  header .header_links {
+    justify-content: center;
+  }
+} */
+
+
+/* Main */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+section.main ul li {
+  list-style-type: none;
+}
+
+section.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  animation: fadeInUp 0.8s;
+}
+
+section.main img {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 10px solid var(--border);
+  margin-bottom: 10px;
+}
+
+section.main span {
+  color: var(--text);
+  font-size: 30px;
+}
+
+section.main ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section.main ul li a {
+  color: var(--icons);
+  display: flex;
+  text-decoration: none;
+  margin: 15px 5px;
+  font-size: 25px;
+  padding: 3px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+section.main ul li a:hover {
+  transition: 0.3s all;
+  color: var(--text);
+}
+
+/* Discord Status */
+#discord-status {
+  font-size: 15px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+.status.currently {
+  font-size: 15px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+.status.online {
+  color: var(--color-online);
+  font-size: 15px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+.status.idle {
+  color: var(--color-idle);
+  font-size: 15px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+.status.busy {
+  color: var(--color-busy);
+  font-size: 15px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+.status.offline {
+  color: var(--color-offline);
+  font-size: 15px;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 150px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, -150px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Theme Switcher */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16161a;
+    --text: #fefeff;
+    --icons: #a6a8b8;
+    --border: rgba(33, 34, 43, 0.576);
+  }
+}
+
+@media (max-width: 600px) {
+  .status.online {
+    color: var(--color-online);
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.5s ease, color 0.5s ease;
+  }
+  
+  .status.idle {
+    color: var(--color-idle);
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.5s ease, color 0.5s ease;
+  }
+  
+  .status.busy {
+    color: var(--color-busy);
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.5s ease, color 0.5s ease;
+  }
+  
+  .status.offline {
+    color: var(--color-offline);
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.5s ease, color 0.5s ease;
+  }
+}
