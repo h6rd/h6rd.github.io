@@ -1,5 +1,5 @@
 // Discord Status
-var uid = '1087944946767630336';
+var uid = '905464115911327785';
 var api = 'https://api.lanyard.rest/v1/users/' + uid;
 var apiDownShown = false;
 
